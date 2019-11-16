@@ -17,4 +17,24 @@ const sumOfNum = (num,sum = 0) => {
     num--
     return sumOfNum(num,sum)
 }
-console.log(sumOfNum(6))
+// console.log(sumOfNum(6))
+
+//Problem 2
+
+// - ### Multiply array
+
+// Write a function called `multArr` that takes in an array of numbers as an argument and recursively multiplies together all of the values in the array.
+
+// ```js
+// multArr([2, 3, 5]); // returns 30
+// multArr([5, 5, 1, 2]); //returns 50
+// ```
+
+const multArr = (arr, product = 1) => {
+    if(arr.length === 0) return product;
+    let el = arr.pop();
+    return multArr(arr) * el;
+}
+
+// console.log(multArr([2, 3, 5]));
+// console.log(multArr([0]));

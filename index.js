@@ -39,7 +39,7 @@ const multArr = (arr, product = 1) => {
 // console.log(multArr([2, 3, 5]));
 // console.log(multArr([0]));
 
-//Problem
+//Problem 3
 
 // - ### Concatenate array
 
@@ -55,5 +55,26 @@ const concatArr = (arr, concat = "") => {
     concat = arr.pop();
     return concatArr(arr) + concat + " "
 }
-console.log(concatArr(['is', 'it', 'tomorrow']))
-//
+// console.log(concatArr(['is', 'it', 'tomorrow']))
+
+//Problem 4
+
+// - ### Sum evens
+
+// Write a function called `sumEvens` that takes in an array of numbers as an argument and recursively sums only the even numbers in the array.
+
+// ```js
+// sumEvens([2, 3, 5, 6]); // returns 8
+// sumEvens([10, 5, 1, 2, 12]); //returns 24
+// ```
+
+const sumEvens = (arr, i = 0, sum = 0) => {
+    if(i >= arr.length) return sum;
+    if(arr[i] % 2 === 0) {
+        sum += arr[i];
+    }
+    i++;
+    return sumEvens(arr, i, sum);
+}
+// console.log(sumEvens([2, 3, 5, 6]));
+// console.log(sumEvens([10, 5, 1, 2, 12]));

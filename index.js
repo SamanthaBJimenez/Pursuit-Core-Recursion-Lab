@@ -38,3 +38,22 @@ const multArr = (arr, product = 1) => {
 
 // console.log(multArr([2, 3, 5]));
 // console.log(multArr([0]));
+
+//Problem
+
+// - ### Concatenate array
+
+// Write a function called `concatArr` that takes in an array of strings as an argument and recursively concatenates the strings together into a single string, with spaces between each original string.
+
+// ```js
+// concatArr(['is', 'it', 'tomorrow']); // returns 'is it tomorrow'
+// concatArr(['or', 'just', 'the', 'end', 'of', 'time']); //returns 'or just the end of time'
+// ```
+
+const concatArr = (arr, concat = "") => {
+    if(arr.length === 0) return concat
+    concat = arr.pop();
+    return concatArr(arr) + concat + " "
+}
+console.log(concatArr(['is', 'it', 'tomorrow']))
+//
